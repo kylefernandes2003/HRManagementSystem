@@ -1,0 +1,50 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/daygrid": "^5.11.3",
+    "@fullcalendar/interaction": "^5.11.3",
+    "@fullcalendar/list": "^5.11.3",
+    "@fullcalendar/react": "^5.11.3",
+    "@fullcalendar/timegrid": "^5.11.3",
+    "@mui/icons-material": "^5.15.12",
+    "@mui/material": "^5.15.12",
+    "@mui/x-data-grid": "^6.19.6",
+    "@nivo/bar": "^0.85.1",
+    "@nivo/core": "^0.85.1",
+    "@nivo/geo": "^0.85.1",
+    "@nivo/line": "^0.85.1",
+    "@nivo/pie": "^0.85.1",
+    "formik": "^2.4.5",
+    "pdfjs-dist": "^4.0.379",
+    "pro": "^0.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-pdf": "^7.7.1",
+    "react-pro-sidebar": "^0.7.1",
+    "react-router-dom": "^6.22.1",
+    "sidebar": "^1.0.2",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.1.0"
+  }
+}

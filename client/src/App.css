@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  /*color: white; */
+}
+
+.app {
+  display: flex;
+  height: 100vh; /* Ensure the entire viewport height is covered */
+}
+
+.content-wrapper {
+  flex: 1; /* Allow the main content to grow and occupy remaining space */
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds viewport height */
+  position: relative; /* Ensure proper stacking context */
+}
+
+.main-content {
+  padding-top: 64px; /* Adjust based on your navbar height */
+  padding-left: 280px; /* Adjust based on your sidebar width */
+  height: 100%; /* Occupy entire height of content wrapper */
+}
