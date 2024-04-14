@@ -3,6 +3,7 @@ const Turnover = require("../models/turnover-model");
 const bcrypt = require("bcryptjs");
 const Absent = require("../models/absent-model");
 const Transaction = require("../models/transaction-model");
+const Resume = require("../models/resume-model");
 
 const home = async (req, res) => {
   try {
@@ -371,6 +372,27 @@ const getAgeDistribution = async (req, res) => {
   }
 };
 
+const saveResumeData = async (req, res) => {
+  try {
+    const { name, email, phone, cgpa, comments } = req.body;
+
+    const resume = await Resume.create({
+      username: name,
+      email,
+      phone,
+      cgpa,
+      comments,
+    });
+
+    // await User.findByIdAndDelete(user_id);
+
+    res.status(201).json({ message: "Resume added successfully" });
+  } catch (error) {
+    console.error("Error saving resume data:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
 module.exports = {
   home,
   register,
@@ -384,4 +406,5 @@ module.exports = {
   getTurnoverDataWithDepartments,
   getAbsenteeismDataByDepartment,
   getAgeDistribution,
+  saveResumeData,
 };

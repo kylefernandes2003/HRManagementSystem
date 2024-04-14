@@ -9,6 +9,8 @@ const authControllers = require("../server/controllers/auth-controller");
 const multer = require("multer");
 const { spawn } = require("child_process");
 const analyzeResume = require("./controllers/resume-analyzer-controller");
+const fs = require("fs");
+const Resume = require("./models/resume-model");
 
 // const analyze_resume = require("./scripts/resume_analyzer.py");
 
@@ -28,6 +30,7 @@ app.use(express.json());
 app.use("/api/auth", router);
 app.get("/api/users", authControllers.getAllUsers);
 app.get("/api/transactions", authControllers.getRecentTransactions);
+app.post("/api/save-resume", authControllers.saveResumeData);
 
 app.post("/api/analyze-resume", upload.single("resume"), analyzeResume);
 
